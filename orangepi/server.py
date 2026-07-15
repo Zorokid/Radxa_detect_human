@@ -8,7 +8,7 @@ import os, sys, urllib.request
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 # Radxa detector base URL: env RADXA_URL, else argv[1], else this LAN default.
-RADXA = os.environ.get("RADXA_URL", "http://192.168.1.10:8092")
+RADXA = os.environ.get("RADXA_URL", "http://<radxa-ip>:8092")
 PORT  = 8090                          # 8080 is taken by another project on this host
 
 PAGE = r"""<!doctype html><html lang="vi"><head><meta charset="utf-8">

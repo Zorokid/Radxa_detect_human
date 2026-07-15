@@ -6,7 +6,7 @@ After=network.target
 Type=simple
 User=orangepi
 # Set this to your Radxa detector's LAN IP (host running detect_human on :8092).
-Environment=RADXA_URL=http://192.168.1.10:8092
+Environment=RADXA_URL=http://<radxa-ip>:8092
 WorkingDirectory=/home/orangepi/Radxa_detect_human/orangepi
 ExecStart=/usr/bin/python3 -u /home/orangepi/Radxa_detect_human/orangepi/server.py
 Restart=always
