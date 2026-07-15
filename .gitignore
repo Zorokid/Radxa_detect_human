@@ -1,0 +1,35 @@
+# Build output
+*/build/
+build/
+*.o
+*.obj
+
+# Python
+**/venv/
+**/__pycache__/
+*.pyc
+
+# Local / private (not for the public repo)
+CLAUDE.md
++ Phần cứng.txt
+.vscode/
+.claude/
+
+# Model weights + vendor runtime libs (board-specific, not source)
+weights/
+*.bin
+*.dlc
+*.onnx
+*.pt
+*.so
+*.so.*
+
+# Conversion work artifacts (calibration frames, raws, dumps)
+convert/work/
+*.raw
+*.mjpg
+
+# Captures / scratch images
+*.jpg
+*.jpeg
+*.png

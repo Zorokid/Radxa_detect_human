@@ -1,0 +1,17 @@
+[Unit]
+Description=detect_human NPU full-body detector (Radxa Q6A)
+After=network.target ascamera.service
+Wants=ascamera.service
+
+[Service]
+Type=simple
+User=root
+Environment=HOME=/home/radxa
+Environment=QAIRT_ROOT=/home/radxa/qairt/2.42.0.251225
+WorkingDirectory=/home/radxa/Radxa_detect_human/radxa
+ExecStart=/bin/sh /home/radxa/Radxa_detect_human/radxa/run.sh --annotate 0
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
